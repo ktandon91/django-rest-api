@@ -17,5 +17,5 @@ class LimitedAccess(permissions.BasePermission):
         group = request.user.groups.filter(name='limited_access')
         if group.exists():
             return True
-        else:
-            return False
+
+        return False
